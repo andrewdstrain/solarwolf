@@ -373,7 +373,7 @@ def save_translations():
         p = pickle.Pickler(f, 1)
         p.dump(translations)
         f.close()
-    except (IOError, OSError), msg:
+    except (IOError, OSError) as msg:
         import messagebox
         messagebox.error("Error Saving Control Data",
 "There was an error saving the control data.\nCurrent player controls have been lost.\n\n%s"%msg)
