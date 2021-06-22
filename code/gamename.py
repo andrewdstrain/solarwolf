@@ -13,7 +13,7 @@ import gamecreds
 import gamenews
 
 
-charset = string.uppercase + '-.'
+charset = string.ascii_uppercase + '-.'
 fontlookup = {}
 fontimages = []
 images = []
