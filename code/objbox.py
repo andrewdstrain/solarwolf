@@ -30,7 +30,7 @@ def load_game_resources():
     rboximages = gfx.animstrip(imgs)
 
     pal = [min(g+60,255) for (r,g,b) in origpal]
-    imgs.set_palette(zip(pal,pal,pal))
+    imgs.set_palette(list(zip(pal,pal,pal)))
     wboximages = gfx.animstrip(imgs)
 
     popimages = gfx.animstrip(gfx.load('popbox.png'))
