@@ -21,7 +21,7 @@ def initialize():
 class Font:
     def __init__(self, name, size, bold=0, italic=0):
         val = name, size
-        if FontPool.has_key(val):
+        if val in FontPool:
             font = FontPool[val]
         else:
             font = SysFont(name, size, bold, italic)

@@ -128,7 +128,7 @@ QuickHelp = {
 
 
 def help(helpname, helppos):
-    if not game.player.help.has_key(helpname):
+    if helpname not in game.player.help:
         game.player.help[helpname] = 1
         if game.help == 0:
             game.handler = GameHelp(game.handler, helpname, helppos)
@@ -179,7 +179,7 @@ class GameHelp:
 
 
     def drawhelp(self, name, pos):
-        if Help.has_key(name):
+        if name in Help:
             text = Help[name]
             lines = text.splitlines()
             for x in range(1, len(lines)):

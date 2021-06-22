@@ -36,7 +36,7 @@ def load_game_resources():
     step = 0
     for letter in charset + '<>':
         pos = xoffset+xsize*(step%10), yoffset+ysize*(step/10)
-        if extraimgs.has_key(letter):
+        if letter in extraimgs:
             img = img2 = extraimgs[letter]
             r = img.get_rect()
             r.center = pos

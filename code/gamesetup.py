@@ -152,7 +152,7 @@ class GameSetup:
     def selectall(self):
         snd.play('select_choose')
         self.clearactionlist()
-        if not input.translations.has_key(NOEVENT):
+        if NOEVENT not in input.translations:
             input.translations[NOEVENT] = {}
         input.translations[NOEVENT][KEYDOWN] = input.actions_order[self.currentaction]
         input.translations[NOEVENT][JOYBUTTONDOWN] = input.actions_order[self.currentaction]

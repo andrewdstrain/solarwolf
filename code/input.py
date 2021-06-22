@@ -158,16 +158,16 @@ def exclusive(list, i):
     global exclusivedict
     thislist = str(list)
     if i.translated in list:
-        if not exclusivedict.has_key(thislist):
+        if thislist not in exclusivedict:
             exclusivedict[thislist] = {}
         table = exclusivedict[thislist]
         if i.release:
-            if not table.has_key(i.translated):
+            if i.translated not in table:
                 table[i.translated] = 0
             else:
                 table[i.translated] -= 1
         else:
-            if not table.has_key(i.translated):
+            if i.translated not in table:
                 table[i.translated] = 1
             else:
                 table[i.translated] += 1
@@ -321,7 +321,7 @@ def getdisplay():
     display = {}
     for type, table in translations.items():
         for normalized, action in table.items():
-            if not display.has_key(action):
+            if action not in display:
                 display[action] = []
             if type != NOEVENT:
                 display[action].append((type, normalized))
@@ -343,7 +343,7 @@ def setdisplay(display):
         for l in range(len(display[a])):
             type = display[a][l][0]
             normalized = display[a][l][1]
-            if not translations.has_key(type):
+            if type not in translations:
                 translations[type] = {}
             if type != NOEVENT:
                 translations[type][normalized] = a

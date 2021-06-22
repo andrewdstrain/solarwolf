@@ -35,7 +35,7 @@ def _simplename(name):
 
 #insert a font and style into the font dictionary
 def _addfont(name, bold, italic, font, fontdict):
-    if not fontdict.has_key(name):
+    if name not in fontdict:
         fontdict[name] = {}
     fontdict[name][bold, italic] = font
 
@@ -175,14 +175,14 @@ def create_aliases():
         found = None
         fname = None
         for name in set:
-            if Sysfonts.has_key(name):
+            if name in Sysfonts:
                 found = Sysfonts[name]
                 fname = name
                 break
         if not found:
             continue
         for name in set:
-            if not Sysfonts.has_key(name):
+            if name not in Sysfonts:
                 Sysalias[name] = found
 
 
