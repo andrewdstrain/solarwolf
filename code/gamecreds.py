@@ -13,7 +13,7 @@ credits = (
     ('Graphics', ('Eero Tamminen',)),
     ('Music', ('"theGREENzebra"',)),
     ('Programming Help', ('Aaron "APS" Schlaegel', 'Michael "MU" Urman')),
-    ('Special Thanks', ('David "Futility" Clark', 'Shandy Brown', 'John "Jacius" Croisant', 'Guido "Python" van Rossom', 'Sam "SDL" Lantinga')),
+    ('Special Thanks', ('David "Futility" Clark', 'Shandy Brown', 'John "Jacius" Croisant', 'Guido "Python" van Rossom', 'Sam "SDL" Lantinga', 'Andrew "Andy" Strain'), ),
 )
 
 licenseinfo = ('This program is free software. You are encouraged to',
