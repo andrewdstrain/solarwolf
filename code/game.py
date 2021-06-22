@@ -2,7 +2,6 @@
 
 import os
 from pygame.rect import Rect
-from cStringIO import StringIO
 
 
 

@@ -35,8 +35,8 @@ def main():
     checkdependencies()
 
     #install pychecker if debugging
+    import game
     try:
-        import game
         if game.DEBUG >= 2:
             import pychecker.checker
             print('Pychecker Enabled')
