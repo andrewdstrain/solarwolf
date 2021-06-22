@@ -105,7 +105,7 @@ def make_dataname(filename):
         home = os.environ['HOME']
         fullhome = os.path.join(home, '.solarwolf')
         if not os.path.isdir(fullhome):
-            try: os.mkdir(fullhome, 0755)
+            try: os.mkdir(fullhome, 0o755)
             except OSError: fullhome = home
         filename = os.path.join(fullhome, filename)
     else:
