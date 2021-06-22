@@ -31,7 +31,7 @@ if not icon_file:
 
 
 #create the proper commandline args
-args = ['py2exe', '--force', '-O'+`optimize`]
+args = ['py2exe', '--force', '-O' + repr(optimize)]
 args.append(dos_console and '--console' or '--windows')
 if icon_file:
     args.append('--icon')
