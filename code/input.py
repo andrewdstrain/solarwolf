@@ -361,8 +361,7 @@ def load_translations():
     #    translations = pickle.load(open(filename, 'rb'))
     #except (IOError, OSError, KeyError):
         #print('ERROR OPENING CONTROL FILE, loading defaults')
-    if 1:
-        translations = translations_default
+    translations = translations_default
 
 def save_translations():
     global translations
