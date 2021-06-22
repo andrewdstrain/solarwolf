@@ -30,8 +30,8 @@ def loadresources():
     except:
         #raise
         global load_finished_status, load_finished_message, load_finished_module, load_finished_type
-        load_finished_message = str(sys.exc_value)
-        load_finished_type = str(sys.exc_type) + ' in module ' + m
+        load_finished_message = str(sys.exc_info()[1])
+        load_finished_type = str(sys.exc_info()[0]) + ' in module ' + m
         load_finished_status = -1
     game.thread = None
 
@@ -55,7 +55,7 @@ class GameInit:
         self.starttime = pygame.time.get_ticks()
         #self.gatherinfo()
         self.handlederror = 0
-        self.thread = threading.Thread(None, loadresources)
+        self.thread = threading.Thread(group=None, target=loadresources)
         game.threadstop = 0
         game.thread = self.thread
         self.thread.start()
@@ -161,7 +161,7 @@ class GameInit:
 
         now = pygame.time.get_ticks()
         #we let the screen stay up for at about 1 second
-        if not self.thread.isAlive():
+        if not self.thread.is_alive():
             if load_finished_status >= 0:
                 if now-self.starttime > 1200:
                     self.quit()

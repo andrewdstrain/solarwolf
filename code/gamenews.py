@@ -32,7 +32,7 @@ def load_game_resources():
     images.append((img, r))
 
     img = gfx.load('download.png')
-    downimgs = gfx.animstrip(img, img.get_width()/2)
+    downimgs = gfx.animstrip(img, img.get_width()//2)
     for i in ('downerror', 'newversion', 'downok'):
         img = gfx.load(i+'.gif')
         downimgs.append(img)
@@ -177,7 +177,7 @@ class GameNews:
     def download_start(self):
         if not self.thread:
             self.success = 0
-            thread = threading.Thread(None, downloadfunc, 'FETCHNEWS', [self])
+            thread = threading.Thread(group=None, target=downloadfunc, name='FETCHNEWS')
             self.downcur = 1
             thread.start()
             self.thread = thread
@@ -234,7 +234,7 @@ class GameNews:
         self.clocks += 1
         self.cleartext()
 
-        if self.thread and (not self.thread.isAlive() and self.success):
+        if self.thread and (not self.thread.is_alive() and self.success):
             self.download_finished()
 
         clearme = None
@@ -302,7 +302,7 @@ class GameNews:
         if self.downcur == 3:
             img = self.downimgs[2]
         else:
-            self.downcur = (self.clocks / 8) % 2 + 1
+            self.downcur = (self.clocks // 8) % 2 + 1
             img = self.downimgs[self.downcur-1]
         return img, img.get_rect().move(self.downloadpos)
 
