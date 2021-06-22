@@ -1,5 +1,5 @@
 SolarWolf - http://pygame.org/shredwheat/solarwolf
-by Pete "ShredWheat" Shinners" - pete@shinners.org
+by Pete "ShredWheat" Shinners - pete@shinners.org
 
 SolarWolf is an action/arcade game written entirely in Python.
 It is free and open source, released under the LGPL license.
