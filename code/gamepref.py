@@ -39,7 +39,7 @@ def save_prefs():
             val = getattr(game, p)
             f.write("%s = %d\n" % (p, int(val)))
         f.close()
-    except (IOError, OSError), msg:
+    except (IOError, OSError) as msg:
         #print('ERROR SAVING PREFS FILE')
         pass
 

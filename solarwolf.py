@@ -40,7 +40,7 @@ def main():
         if game.DEBUG >= 2:
             import pychecker.checker
             print('Pychecker Enabled')
-    except ImportError, m:
+    except ImportError as m:
         pass
 
     #run game and protect from exceptions

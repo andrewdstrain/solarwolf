@@ -32,8 +32,8 @@ def initialize(size, fullscreen):
         if surface.get_bytesize() == 1:
             loadpalette()
 
-    except pygame.error, msg:
-        raise pygame.error, 'Cannot Initialize Graphics'
+    except pygame.error as msg:
+        raise pygame.error('Cannot Initialize Graphics')
     starobj = stars.Stars()
 
 

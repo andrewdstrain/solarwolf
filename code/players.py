@@ -94,7 +94,7 @@ def save_players():
         p = pickle.Pickler(f, 1)
         p.dump(allplayers)
         f.close()
-    except (IOError, OSError), msg:
+    except (IOError, OSError) as msg:
         import messagebox
         messagebox.error("Error Saving Player Data",
 "There was an error saving the player data.\nCurrent player data has been lost.\n\n%s"%msg)

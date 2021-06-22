@@ -42,7 +42,7 @@ def gamemain(args):
     input.init()
 
     if not txt.initialize():
-        raise pygame.error, "Pygame Font Module Unable to Initialize"
+        raise pygame.error("Pygame Font Module Unable to Initialize")
 
     #create the starting game handler
     from gameinit import GameInit
