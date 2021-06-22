@@ -29,7 +29,7 @@ class PopShot:
             gfx.dirty(r)
 
     def draw(self, gfx):
-        img = images[self.clocks/3]
+        img = images[self.clocks // 3]
         r = gfx.surface.blit(img, self.rect)
         gfx.dirty(r)
 

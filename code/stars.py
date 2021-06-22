@@ -31,7 +31,7 @@ class Stars:
         change = int((fps - 35.0) * 1.8)
         change = min(change, 12) #limit how quickly they can be added
         numstars = self.numstars + change
-        numstars = max(min(numstars, self.maxstars/2), 0)
+        numstars = max(min(numstars, self.maxstars // 2), 0)
         if numstars < self.numstars:
             DIRTY, BGD = gfx.dirty, self.last_background
             for rect, vel, col in self.stars[self.odd][numstars:self.numstars]:

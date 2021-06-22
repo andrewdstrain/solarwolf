@@ -40,7 +40,7 @@ class Smoke:
             gfx.dirty(r.inflate(1, 2))
 
     def draw(self, gfx):
-        frame = min(self.clocks / 5, 3)
+        frame = min(self.clocks // 5, 3)
         img = images[frame]
         r = gfx.surface.blit(img, self.rect)
         gfx.dirty(r.inflate(1, 2))

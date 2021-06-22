@@ -40,7 +40,7 @@ def makelevel(level):
     "returns (list, startcenter) level number"
     if not initialized: init()
     lev = Levels[level%len(Levels)]
-    touches = level/len(Levels) + 1
+    touches = level // len(Levels) + 1
     passes = (level>len(Levels) and 2) or 1
     boxlist = []
     size = 58, 58
@@ -74,7 +74,7 @@ def preview(level):
     "returns (list, startcenter) level number"
     if not initialized: init()
     lev = Levels[level%len(Levels)]
-    touches = level/len(Levels) + 1
+    touches = level // len(Levels) + 1
     passes = (level>len(Levels) and 2) or 1
     boxlist = []
     size = 5, 5

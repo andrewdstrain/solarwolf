@@ -196,6 +196,6 @@ Effects = [ExtraLevelTime, PopShots, Shield,
 
 
 def newpowerup(levelnum):
-    choices = Effects[:2+(levelnum/8)]
+    choices = Effects[:2+(levelnum // 8)]
     effect = random.choice(choices)
     return Powerup(effect)
