@@ -17,7 +17,7 @@ class Stars:
             speed = -val, val
             rect = Rect(randint(0, scrwide), randint(0, scrhigh), 1, 1)
             stars.append([rect, speed, color])
-        half = self.maxstars / 2
+        half = self.maxstars // 2
         self.stars = stars[:half], stars[half:]
         self.numstars = 50
         self.dead = 0
