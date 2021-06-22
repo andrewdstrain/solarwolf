@@ -12,7 +12,7 @@ winners = []
 
 
 def new_guid():
-    return str(random.randint(0, sys.maxint-1))
+    return str(random.randint(0, sys.maxsize-1))
 
 def make_winner(player):
     player.winner = 1
