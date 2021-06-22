@@ -207,11 +207,11 @@ def translate(event):
                 dir = os.environ.get('HOME', '.')
                 file = 'solarwolf%02d.bmp' % ScreenshotNum
                 fullname = os.path.join(dir, file)
-                print 'Screenshot:', fullname
+                print('Screenshot:', fullname)
                 try:
                     pygame.image.save(pygame.display.get_surface(), fullname)
                 except:
-                    print ' Screenshot FAILED'
+                    print(' Screenshot FAILED')
                 ScreenshotNum += 1
         elif event.key not in (K_NUMLOCK, K_CAPSLOCK):
             normalized = event.key
@@ -360,7 +360,7 @@ def load_translations():
     #    filename = game.make_dataname('input')
     #    translations = pickle.load(open(filename, 'rb'))
     #except (IOError, OSError, KeyError):
-        #print 'ERROR OPENING CONTROL FILE, loading defaults'
+        #print('ERROR OPENING CONTROL FILE, loading defaults')
     if 1:
         translations = translations_default
 

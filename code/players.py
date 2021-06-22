@@ -82,7 +82,7 @@ def load_players():
                     p.cheater = 0
     except (IOError, OSError, KeyError, IndexError):
         players = []
-        #print 'ERROR OPENING PLAYER FILE'
+        #print('ERROR OPENING PLAYER FILE')
 
 
 

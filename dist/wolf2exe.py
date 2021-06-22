@@ -50,7 +50,7 @@ setup(name=project_name, scripts=[script])
 #also need to hand copy the extra files here
 def installfile(name):
     dst = os.path.join('dist', project_name)
-    print 'copying', name, '->', dst
+    print('copying', name, '->', dst)
     if os.path.isdir(name):
         dst = os.path.join(dst, name)
         if os.path.isdir(dst):
@@ -59,7 +59,7 @@ def installfile(name):
     elif os.path.isfile(name):
         shutil.copy(name, dst)
     else:
-        print 'Warning, %s not found' % name
+        print('Warning, %s not found' % name)
 
 
 

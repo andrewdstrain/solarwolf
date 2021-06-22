@@ -27,7 +27,7 @@ def load_prefs():
             name, val = [s.strip() for s in line.split('=')]
             setattr(game, name, int(val))
     except (IOError, OSError, KeyError):
-        #print 'ERROR OPENING PREFS FILE'
+        #print('ERROR OPENING PREFS FILE')
         pass
 
 
@@ -40,7 +40,7 @@ def save_prefs():
             f.write("%s = %d\n" % (p, int(val)))
         f.close()
     except (IOError, OSError), msg:
-        #print 'ERROR SAVING PREFS FILE'
+        #print('ERROR SAVING PREFS FILE')
         pass
 
 

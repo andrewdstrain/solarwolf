@@ -37,7 +37,7 @@ class Stars:
             for rect, vel, col in self.stars[self.odd][numstars:self.numstars]:
                 DIRTY(BGD(rect))
         self.numstars = numstars
-        #print 'STAR:', numstars, fps, change
+        #print('STAR:', numstars, fps, change)
 
 
     def erase_tick_draw(self, background, gfx):

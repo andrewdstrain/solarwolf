@@ -39,7 +39,7 @@ def main():
         import game
         if game.DEBUG >= 2:
             import pychecker.checker
-            print 'Pychecker Enabled'
+            print('Pychecker Enabled')
     except ImportError, m:
         pass
 
@@ -48,14 +48,14 @@ def main():
         import main, pygame
         main.main(sys.argv)
     except KeyboardInterrupt:
-        print 'Keyboard Interrupt (Control-C)...'
+        print('Keyboard Interrupt (Control-C)...')
     except:
         #must wait on any threading
         if game.thread:
             game.threadstop = 1
             while game.thread:
                 pygame.time.wait(10)
-                print 'waiting on thread...'
+                print('waiting on thread...')
         exception_handler()
         if game.DEBUG:
             raise

@@ -17,8 +17,8 @@ def main(args):
     try:
         gamemain(args)
     except KeyboardInterrupt:
-        print 'Keyboard Interrupt...'
-        print 'Exiting'
+        print('Keyboard Interrupt...')
+        print('Exiting')
 
 
 def gamemain(args):
@@ -71,7 +71,7 @@ def gamemain(args):
         for event in pygame.event.get():
             if event.type == pygame.USEREVENT:
                 fps = game.clock.get_fps()
-                #print 'FRAMERATE: %f fps' % fps
+                #print('FRAMERATE: %f fps' % fps)
                 gfx.starobj.recalc_num_stars(fps)
                 continue
             elif event.type == pygame.ACTIVEEVENT:
@@ -100,7 +100,7 @@ def gamemain(args):
             handler.event(event)
         handler.run()
         game.clockticks = game.clock.tick(40)
-        #print 'ticks=%d  rawticks=%d  fps=%.2f'%(game.clock.get_time(), game.clock.get_rawtime(), game.clock.get_fps())
+        #print('ticks=%d  rawticks=%d  fps=%.2f'%(game.clock.get_time(), game.clock.get_rawtime(), game.clock.get_fps()))
         gfx.update()
         while not pygame.display.get_active():
             pygame.time.wait(100)
@@ -110,7 +110,7 @@ def gamemain(args):
 
     gameend = pygame.time.get_ticks()
     runtime = (gameend - gamestart) / 1000.0
-    #print "FINAL FRAMERATE: ", numframes, runtime, numframes/runtime
+    #print("FINAL FRAMERATE: ", numframes, runtime, numframes/runtime)
 
 
     #game is finished at this point, do any
