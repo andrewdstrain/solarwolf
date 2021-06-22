@@ -1,10 +1,7 @@
 "gamemenu handler. main menu"
 
-import math, os
-import pygame
-from pygame.locals import *
 import game, gfx, snd, txt
-import gameplay, gamemenu, players
+import gamemenu, players
 
 
 
@@ -96,7 +93,6 @@ class GameWin:
 
             for cred, pos in self.text:
                 gfx.surface.blit(cred, pos)
-
 
     def background(self, area):
         return gfx.surface.fill((0, 0, 0), area)
