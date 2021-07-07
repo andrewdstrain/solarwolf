@@ -1,3 +1,15 @@
+Changes
+-------
+
+I fixed the code to work with Python 3 and the current `PyGame <https://pygame.org/>`_ code.
+
+Getting this to run on an M1 Mac is possible. Please see the M1_Mac.rst document for instructions.
+
+Orignal README Text
+-------------------
+
+----
+
 SolarWolf - http://pygame.org/shredwheat/solarwolf
 by Pete "ShredWheat" Shinners - pete@shinners.org
 
