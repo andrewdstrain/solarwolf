@@ -1,4 +1,4 @@
-From a clean slate (empty Homebrew): Run the following commands:
+From a clean slate (empty Homebrew) run the following commands:
 
 ::
 
