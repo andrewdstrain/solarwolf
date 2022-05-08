@@ -3,7 +3,7 @@ Changes
 
 I fixed the code to work with Python 3 and the current `PyGame <https://pygame.org/>`_ code.
 
-Getting this to run on an M1 Mac is possible. Please see the `M1_Mac.rst <M1_Mac.rst>`_ document for instructions.
+Getting this to run on an M1 Mac is possible. Please see the `M1_Mac <M1_Mac.rst>`_ document for instructions.
 
 Orignal README Text
 -------------------
