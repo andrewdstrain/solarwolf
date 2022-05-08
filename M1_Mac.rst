@@ -16,7 +16,7 @@ From a clean slate (empty Homebrew) run the following commands:
     pip install venvdotapp
     venvdotapp
 
-    pip install --no-cache-dir git+https://github.com/nelsonlove/pygame
+    pip install pygame
 
 
 **Note**: You don't have to have an empty Homebrew. Just be sure that the packages are installed.
